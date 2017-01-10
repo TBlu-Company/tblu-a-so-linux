@@ -14,3 +14,16 @@ describe('mOSCPU', function() {
         });
     });
 });
+
+describe('mLinuxMemory', function() {
+    it('get mLinuxMemory', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxMemory";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
