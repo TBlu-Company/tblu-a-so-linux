@@ -31,3 +31,16 @@ describe('mLinuxCPU', function() {
         });
     });
 });
+
+describe('mLinuxFSSize', function() {
+    it('get mLinuxFSSize', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxFSSize";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
