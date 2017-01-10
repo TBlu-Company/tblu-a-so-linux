@@ -27,3 +27,16 @@ describe('mLinuxMemory', function() {
         });
     });
 });
+
+describe('mLinuxBlockDevice', function() {
+    it('get mLinuxBlockDevice', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxBlockDevice";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
