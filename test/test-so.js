@@ -96,3 +96,29 @@ describe('mLinuxNetworkIO', function() {
         });
     });
 });
+
+describe('mLinuxCPUInfo', function() {
+    it('get mLinuxCPUInfo', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxCPUInfo";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
+
+describe('mLinuxCPUTemperature', function() {
+    it('get mLinuxCPUTemperature', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxCPUTemperature";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
