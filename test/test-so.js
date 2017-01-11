@@ -44,3 +44,16 @@ describe('mLinuxFSSize', function() {
         });
     });
 });
+
+describe('mLinuxFSSizeLogical', function() {
+    it('get mLinuxFSSizeLogical', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxFSSizeLogical";
+        core.run(data).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
