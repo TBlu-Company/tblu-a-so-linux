@@ -88,7 +88,7 @@ describe('mLinuxNetworkIO', function() {
     it('get mLinuxNetworkIO', function(done) {
         let data = {};
         data['moduleFunction'] = "mLinuxNetworkIO";
-        core.run(data).then(result => {
+        core.run(data, dBconfig).then(result => {
             console.log(result);
             done();
         }).catch(error => {
