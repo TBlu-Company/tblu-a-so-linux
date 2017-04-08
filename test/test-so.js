@@ -32,10 +32,10 @@ describe('mLinuxCPU', function() {
     });
 });
 
-describe('mLinuxFSSize', function() {
-    it('get mLinuxFSSize', function(done) {
+describe('mLinuxFSFisic', function() {
+    it('get mLinuxFSFisic', function(done) {
         let data = {};
-        data['moduleFunction'] = "mLinuxFSSize";
+        data['moduleFunction'] = "mLinuxFSFisic";
         core.run(data).then(result => {
             console.log(result);
             done();
@@ -45,10 +45,10 @@ describe('mLinuxFSSize', function() {
     });
 });
 
-describe('mLinuxFSSizeLogical', function() {
-    it('get mLinuxFSSizeLogical', function(done) {
+describe('mLinuxFSLogic', function() {
+    it('get mLinuxFSLogic', function(done) {
         let data = {};
-        data['moduleFunction'] = "mLinuxFSSizeLogical";
+        data['moduleFunction'] = "mLinuxFSLogic";
         core.run(data).then(result => {
             console.log(result);
             done();
