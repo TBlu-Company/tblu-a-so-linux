@@ -96,6 +96,20 @@ describe('mLinuxNetworkIO', function() {
         });
     });
 });
+describe('mLinuxNetworkInterfaces', function() {
+    it('get mLinuxNetworkInterfaces', function(done) {
+        let data = {};
+        data['moduleFunction'] = "mLinuxNetworkInterfaces";
+        core.run(data, dBconfig).then(result => {
+            console.log(result);
+            done();
+        }).catch(error => {
+            done(error);
+        });
+    });
+});
+
+
 
 describe('mLinuxCPUInfo', function() {
     it('get mLinuxCPUInfo', function(done) {
