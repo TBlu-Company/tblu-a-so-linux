@@ -45,18 +45,18 @@ describe('mLinuxFSFisic', function() {
   });
 });
 
-// describe('mLinuxFSLogic', function() {
-//     it('get mLinuxFSLogic', function(done) {
-//         let data = {};
-//         data['moduleFunction'] = "mLinuxFSLogic";
-//         core.run(data).then(result => {
-//             console.log(result);
-//             done();
-//         }).catch(error => {
-//             done(error);
-//         });
-//     });
-// });
+describe('mLinuxFSLogic', function() {
+  it('get mLinuxFSLogic', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mLinuxFSLogic";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
 //
 // describe('mLinuxNetworkConnectionsListen', function() {
 //     it('get mLinuxNetworkConnectionsListen', function(done) {
