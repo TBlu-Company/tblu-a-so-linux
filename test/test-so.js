@@ -20,43 +20,43 @@ const core = require('../index.js');
 // });
 //
 // describe('mLinuxCPU', function() {
-//     it('get mLinuxCPU', function(done) {
-//         let data = {};
-//         data['moduleFunction'] = "mLinuxCPU";
-//         core.run(data, dBconfig).then(result => {
-//             console.log(JSON.stringify(result));
-//             done();
-//         }).catch(error => {
-//             done(error);
-//         });
+//   it('get mLinuxCPU', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxCPU";
+//     core.run(data, dBconfig).then(result => {
+//       console.log(JSON.stringify(result));
+//       done();
+//     }).catch(error => {
+//       done(error);
 //     });
+//   });
 // });
 
-describe('mLinuxFSFisic', function() {
-  it('get mLinuxFSFisic', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mLinuxFSFisic";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
-
-describe('mLinuxFSLogic', function() {
-  it('get mLinuxFSLogic', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mLinuxFSLogic";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
+// describe('mLinuxFSFisic', function() {
+//   it('get mLinuxFSFisic', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxFSFisic";
+//     core.run(data).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
+//
+// describe('mLinuxFSLogic', function() {
+//   it('get mLinuxFSLogic', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxFSLogic";
+//     core.run(data).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
 //
 // describe('mLinuxNetworkConnectionsListen', function() {
 //     it('get mLinuxNetworkConnectionsListen', function(done) {
