@@ -136,3 +136,16 @@ describe('mLinuxCPUTemperature', function() {
     });
   });
 });
+
+describe('mlinuxfsStats', function() {
+  it('get mlinuxfsStats', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mlinuxfsStats";
+    core.run(data, dBconfig).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
