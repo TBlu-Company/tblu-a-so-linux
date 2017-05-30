@@ -2,8 +2,8 @@
 const Datastore = require('nedb');
 const path = require('path');
 const dirname = path.dirname(__filename);
-const dBconfig = new Datastore(dirname + '/config.db');
-dBconfig.loadDatabase();
+const tempDB = new Datastore(dirname + '/tempDB.db');
+tempDB.loadDatabase();
 const core = require('../index.js');
 
 // describe('mLinuxMemory', function() {
@@ -23,8 +23,8 @@ const core = require('../index.js');
 //   it('get mLinuxCPU', function(done) {
 //     let data = {};
 //     data['moduleFunction'] = "mLinuxCPU";
-//     core.run(data, dBconfig).then(result => {
-//       console.log(JSON.stringify(result));
+//     core.run(data, tempDB).then(result => {
+//       console.log(result);
 //       done();
 //     }).catch(error => {
 //       done(error);
@@ -58,37 +58,37 @@ const core = require('../index.js');
 //   });
 // });
 
-describe('mLinuxNetworkConnectionsListen', function() {
-    it('get mLinuxNetworkConnectionsListen', function(done) {
-        let data = {};
-        data['moduleFunction'] = "mLinuxNetworkConnectionsListen";
-        core.run(data).then(result => {
-            console.log(result);
-            done();
-        }).catch(error => {
-            done(error);
-        });
-    });
-});
-
-describe('mLinuxNetworkConnections', function() {
-    it('get mLinuxNetworkConnections', function(done) {
-        let data = {};
-        data['moduleFunction'] = "mLinuxNetworkConnections";
-        core.run(data).then(result => {
-            console.log(result);
-            done();
-        }).catch(error => {
-            done(error);
-        });
-    });
-});
+// describe('mLinuxNetworkConnectionsListen', function() {
+//   it('get mLinuxNetworkConnectionsListen', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxNetworkConnectionsListen";
+//     core.run(data).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
+//
+// describe('mLinuxNetworkConnections', function() {
+//   it('get mLinuxNetworkConnections', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxNetworkConnections";
+//     core.run(data).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
 
 // describe('mLinuxNetworkIO', function() {
 //   it('get mLinuxNetworkIO', function(done) {
 //     let data = {};
 //     data['moduleFunction'] = "mLinuxNetworkIO";
-//     core.run(data, dBconfig).then(result => {
+//     core.run(data, tempDB).then(result => {
 //       console.log(result);
 //       done();
 //     }).catch(error => {
@@ -100,7 +100,7 @@ describe('mLinuxNetworkConnections', function() {
 //   it('get mLinuxNetworkInterfaces', function(done) {
 //     let data = {};
 //     data['moduleFunction'] = "mLinuxNetworkInterfaces";
-//     core.run(data, dBconfig).then(result => {
+//     core.run(data, tempDB).then(result => {
 //       console.log(result);
 //       done();
 //     }).catch(error => {
@@ -137,15 +137,15 @@ describe('mLinuxNetworkConnections', function() {
 //   });
 // });
 //
-// describe('mlinuxfsStats', function() {
-//   it('get mlinuxfsStats', function(done) {
-//     let data = {};
-//     data['moduleFunction'] = "mlinuxfsStats";
-//     core.run(data, dBconfig).then(result => {
-//       console.log(result);
-//       done();
-//     }).catch(error => {
-//       done(error);
-//     });
-//   });
-// });
+describe('mlinuxfsStats', function() {
+  it('get mlinuxfsStats', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mlinuxfsStats";
+    core.run(data, tempDB).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
