@@ -19,18 +19,18 @@ const core = require('../index.js');
 //   });
 // });
 //
-// describe('mLinuxCPU', function() {
-//   it('get mLinuxCPU', function(done) {
-//     let data = {};
-//     data['moduleFunction'] = "mLinuxCPU";
-//     core.run(data, tempDB).then(result => {
-//       console.log(result);
-//       done();
-//     }).catch(error => {
-//       done(error);
-//     });
-//   });
-// });
+describe('mLinuxCPU', function() {
+  it('get mLinuxCPU', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mLinuxCPU";
+    core.run(data, tempDB).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
 //
 // describe('mLinuxFSFisic', function() {
 //   it('get mLinuxFSFisic', function(done) {
@@ -137,10 +137,10 @@ const core = require('../index.js');
 //   });
 // });
 //
-describe('mlinuxfsStats', function() {
-  it('get mlinuxfsStats', function(done) {
+describe('mlinuxDiskIO', function() {
+  it('get mlinuxDiskIO', function(done) {
     let data = {};
-    data['moduleFunction'] = "mlinuxfsStats";
+    data['moduleFunction'] = "mlinuxDiskIO";
     core.run(data, tempDB).then(result => {
       console.log(result);
       done();
