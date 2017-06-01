@@ -24,7 +24,7 @@ describe('mLinuxCPU', function() {
     let data = {};
     data['moduleFunction'] = "mLinuxCPU";
     core.run(data, tempDB).then(result => {
-      console.log(result);
+      // console.log(result);
       done();
     }).catch(error => {
       done(error);
