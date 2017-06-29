@@ -19,18 +19,6 @@ const core = require('../index.js');
 //   });
 // });
 //
-describe('mLinuxCPU', function() {
-  it('get mLinuxCPU', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mLinuxCPU";
-    core.run(data, tempDB).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
 //
 // describe('mLinuxFSFisic', function() {
 //   it('get mLinuxFSFisic', function(done) {
@@ -137,12 +125,24 @@ describe('mLinuxCPU', function() {
 //   });
 // });
 //
-describe('mlinuxDiskIO', function() {
-  it('get mlinuxDiskIO', function(done) {
+// describe('mlinuxDiskIO', function() {
+//   it('get mlinuxDiskIO', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mlinuxDiskIO";
+//     core.run(data, tempDB).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+describe('mLinuxSysctl', function() {
+  it('get mLinuxSysctl', function(done) {
     let data = {};
-    data['moduleFunction'] = "mlinuxDiskIO";
+    data['moduleFunction'] = "mLinuxSysctl";
     core.run(data, tempDB).then(result => {
-      console.log(result);
+      // console.log(result);
+      console.log(JSON.stringify(result));
       done();
     }).catch(error => {
       done(error);
