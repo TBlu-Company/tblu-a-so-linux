@@ -59,18 +59,18 @@ const core = require('../index.js');
 //   });
 // });
 //
-// describe('mLinuxNetworkConnections', function() {
-//   it('get mLinuxNetworkConnections', function(done) {
-//     let data = {};
-//     data['moduleFunction'] = "mLinuxNetworkConnections";
-//     core.run(data).then(result => {
-//       console.log(result);
-//       done();
-//     }).catch(error => {
-//       done(error);
-//     });
-//   });
-// });
+describe('mLinuxNetworkConnections', function() {
+  it('get mLinuxNetworkConnections', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mLinuxNetworkConnections";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
 
 // describe('mLinuxNetworkIO', function() {
 //   it('get mLinuxNetworkIO', function(done) {
