@@ -59,18 +59,18 @@ const core = require('../index.js');
 //   });
 // });
 //
-describe('mLinuxNetworkConnections', function() {
-  it('get mLinuxNetworkConnections', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mLinuxNetworkConnections";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
+// describe('mLinuxNetworkConnections', function() {
+//   it('get mLinuxNetworkConnections', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxNetworkConnections";
+//     core.run(data).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
 
 // describe('mLinuxNetworkIO', function() {
 //   it('get mLinuxNetworkIO', function(done) {
@@ -136,13 +136,28 @@ describe('mLinuxNetworkConnections', function() {
 //       done(error);
 //     });
 //   });
-describe('mLinuxSysctl', function() {
-  it('get mLinuxSysctl', function(done) {
+// describe('mLinuxSysctl', function() {
+//   it('get mLinuxSysctl', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxSysctl";
+//     core.run(data, tempDB).then(result => {
+//       // console.log(result);
+//       console.log(JSON.stringify(result));
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
+
+
+describe('mLinuxPS', function() {
+  it('get mLinuxPS', function(done) {
     let data = {};
-    data['moduleFunction'] = "mLinuxSysctl";
+    data['moduleFunction'] = "mLinuxPS";
     core.run(data, tempDB).then(result => {
       // console.log(result);
-      console.log(JSON.stringify(result));
+      // console.log(JSON.stringify(result));
       done();
     }).catch(error => {
       done(error);
