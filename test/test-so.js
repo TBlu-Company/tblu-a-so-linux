@@ -157,7 +157,7 @@ describe('mLinuxPS', function() {
     data['moduleFunction'] = "mLinuxPS";
     core.run(data, tempDB).then(result => {
       // console.log(result);
-      // console.log(JSON.stringify(result));
+      console.log(JSON.stringify(result));
       done();
     }).catch(error => {
       done(error);
