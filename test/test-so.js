@@ -46,31 +46,32 @@ const core = require('../index.js');
 //   });
 // });
 
-// describe('mLinuxNetworkConnectionsListen', function() {
-//   it('get mLinuxNetworkConnectionsListen', function(done) {
-//     let data = {};
-//     data['moduleFunction'] = "mLinuxNetworkConnectionsListen";
-//     core.run(data).then(result => {
-//       console.log(result);
-//       done();
-//     }).catch(error => {
-//       done(error);
-//     });
-//   });
-// });
-//
-// describe('mLinuxNetworkConnections', function() {
-//   it('get mLinuxNetworkConnections', function(done) {
-//     let data = {};
-//     data['moduleFunction'] = "mLinuxNetworkConnections";
-//     core.run(data).then(result => {
-//       console.log(result);
-//       done();
-//     }).catch(error => {
-//       done(error);
-//     });
-//   });
-// });
+describe('mLinuxNetworkConnectionsListen', function() {
+  it('get mLinuxNetworkConnectionsListen', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mLinuxNetworkConnectionsListen";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
+
+describe('mLinuxNetworkConnections', function() {
+  it('get mLinuxNetworkConnections', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mLinuxNetworkConnections";
+    core.run(data).then(result => {
+      // console.log(result);
+      console.log(JSON.stringify(result));
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
 
 // describe('mLinuxNetworkIO', function() {
 //   it('get mLinuxNetworkIO', function(done) {
@@ -150,17 +151,30 @@ const core = require('../index.js');
 //   });
 // });
 
+// describe('mLinuxCPU', function() {
+//   it('get mLinuxCPU', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxCPU";
+//     core.run(data, tempDB).then(result => {
+//       // console.log(result);
+//       console.log(JSON.stringify(result));
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
 
-describe('mLinuxPS', function() {
-  it('get mLinuxPS', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mLinuxPS";
-    core.run(data, tempDB).then(result => {
-      // console.log(result);
-      console.log(JSON.stringify(result));
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
+// describe('mLinuxPS', function() {
+//   it('get mLinuxPS', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mLinuxPS";
+//     core.run(data, tempDB).then(result => {
+//       // console.log(result);
+//       console.log(JSON.stringify(result));
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
